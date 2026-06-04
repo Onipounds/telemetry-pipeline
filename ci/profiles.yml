@@ -1,7 +1,12 @@
-telemetry_warehouse:
+telemetry_dbt:
   target: ci
   outputs:
     ci:
-      type: duckdb
-      path: warehouse.duckdb
+      type: postgres
+      host: localhost
+      port: 5432
+      user: dbt
+      password: dbt
+      dbname: telemetry
+      schema: public
       threads: 4
