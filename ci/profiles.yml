@@ -1,0 +1,7 @@
+telemetry_warehouse:
+  target: ci
+  outputs:
+    ci:
+      type: duckdb
+      path: warehouse.duckdb
+      threads: 4
